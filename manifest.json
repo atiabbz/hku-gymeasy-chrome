@@ -1,0 +1,21 @@
+{
+  "name": "HKU GymEasy",
+  "description": "Frictionless gym bookings at HKU!",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "./images/icon.png"
+  },
+  "background": {
+    "service_worker": "./background.js"
+  },
+  "action": {
+    "default_popup": "./form.html",
+    "default_icons": {
+      "128": "./images/icon.png"
+    }
+  },
+  "options_page": "./form.html",
+  "permissions": ["storage", "tabs", "scripting"],
+  "host_permissions": ["https://*.fcbooking.cse.hku.hk/*"]
+}
