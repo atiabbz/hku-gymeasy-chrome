@@ -1,5 +1,3 @@
-console.log("I am background.js");
-
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.local.set({
     preferred_fc: "c10001Tab",

@@ -30,61 +30,63 @@ chrome.storage.local.get(
       document.querySelector("#MemberID").value = result.uid;
 
       if (result.vaccination) {
-        document.querySelector('label[for="vacine_t"]').click();
+        document.querySelector("#vacine_t").checked = true;
       } else {
-        document.querySelector('label[for="vacine_f"]').click();
+        document.querySelector("#vacine_f").checked = true;
       }
 
       if (result.q1) {
-        document.querySelector('label[for="Q1_t"]').click();
+        document.querySelector("#Q1_t").checked = true;
       } else {
-        document.querySelector('label[for="Q1_f"]').click();
+        document.querySelector("#Q1_f").checked = true;
       }
 
       if (result.q2) {
-        document.querySelector('label[for="Q2_t"]').click();
+        document.querySelector("#Q2_t").checked = true;
       } else {
-        document.querySelector('label[for="Q2_f"]').click();
+        document.querySelector("#Q2_f").checked = true;
       }
 
       if (result.q3) {
-        document.querySelector('label[for="Q3_t"]').click();
+        document.querySelector("#Q3_t").checked = true;
       } else {
-        document.querySelector('label[for="Q3_f"]').click();
+        document.querySelector("#Q3_f").checked = true;
       }
 
       if (result.q4) {
-        document.querySelector('label[for="Q4_t"]').click();
+        document.querySelector("#Q4_t").checked = true;
       } else {
-        document.querySelector('label[for="Q4_f"]').click();
+        document.querySelector("#Q4_f").checked = true;
       }
 
       if (result.q5) {
-        document.querySelector('label[for="Q5_t"]').click();
+        document.querySelector("#Q5_t").checked = true;
       } else {
-        document.querySelector('label[for="Q5_f"]').click();
+        document.querySelector("#Q5_f").checked = true;
       }
 
       if (result.q6) {
-        document.querySelector('label[for="Q6_t"]').click();
+        document.querySelector("#Q6_t").checked = true;
       } else {
-        document.querySelector('label[for="Q6_f"]').click();
+        document.querySelector("#Q6_f").checked = true;
       }
 
       if (result.q7) {
-        document.querySelector('label[for="Q7_t"]').click();
+        document.querySelector("#Q7_t").checked = true;
       } else {
-        document.querySelector('label[for="Q7_f"]').click();
+        document.querySelector("#Q7_f").checked = true;
       }
 
       if (result.q8) {
-        document.querySelector('label[for="Q8_t"]').click();
+        document.querySelector("#Q8_t").checked = true;
       } else {
-        document.querySelector('label[for="Q8_f"]').click();
+        document.querySelector("#Q8_f").checked = true;
       }
 
       if (result.declaration) {
-        document.querySelector('label[for="dataCollection"]').click();
+        document.querySelector("#dataCollection").checked = true;
+      } else {
+        document.querySelector("#dataCollection").checked = false;
       }
 
       const payment = document.createElement("div");
@@ -104,7 +106,8 @@ chrome.storage.local.get(
                 <span>
                   <h5 class="card-title">Protein 🍳</h5>
                   <p class="card-text">
-                    I made GymEasy to alleviate the annoyance of jumping through many hoops to book a gym session.
+                    I made GymEasy to streamline the cumbersome process of gym session bookings at HKU.
+                    <br>
                     If you find it useful, please consider adding to my protein fund!
                   </p>
                 </span>
@@ -115,12 +118,14 @@ chrome.storage.local.get(
           <div class="col d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
               <a href="https://payme.hsbc/atiabbz" target="_blank">
-                <img src="https://u.cubeupload.com/atiab_bz/kLsBI2.png" class="card-img-top" alt="hsbcpayme">
+                <img src="https://raw.githubusercontent.com/atiabbz/HKU-GymEasy/master/images/hsbcpayme.png" class="card-img-top" alt="hsbcpayme">
               </a>
-              <div class="card-body d-flex justify-content-center">
+              <div class="card-body d-flex justify-content-center align-items-center">
+                <span class="font-monospace">→&nbsp;</span>
                 <a href="https://payme.hsbc/atiabbz" target="_blank" class="btn btn-danger">
                   HSBC PayMe
                 </a>
+                <span class="font-monospace">&nbsp;←</span>
               </div>
             </div>
           </div>
@@ -128,12 +133,14 @@ chrome.storage.local.get(
           <div class="col d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
               <a href="https://qr.alipay.hk/28100401012kfekjs4lin5lx86" target="_blank">
-                <img src="https://u.cubeupload.com/atiab_bz/7BSbKe.png" class="card-img-top" alt="alipayhk">
+                <img src="https://raw.githubusercontent.com/atiabbz/HKU-GymEasy/master/images/alipayhk.png" class="card-img-top" alt="alipayhk">
               </a>
-              <div class="card-body d-flex justify-content-center">
+              <div class="card-body d-flex justify-content-center align-items-center">
+                <span class="font-monospace">→&nbsp;</span>
                 <a href="https://qr.alipay.hk/28100401012kfekjs4lin5lx86" target="_blank" class="btn btn-primary">
                   AlipayHK
                 </a>
+                <span class="font-monospace">&nbsp;←</span>
               </div>
             </div>
           </div>
@@ -143,6 +150,8 @@ chrome.storage.local.get(
       document
         .querySelector("#gCaptcha")
         .insertAdjacentElement("beforebegin", payment);
+
+      document.querySelector("#sbmtBtn").removeAttribute("disabled");
 
       if (url.includes("SignUpPS")) {
         document.querySelector('label[for="dataCollection"]').scrollIntoView();

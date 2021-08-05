@@ -36,62 +36,64 @@ window.onload = () => {
 
       if (result.vaccination !== null) {
         if (result.vaccination) {
-          document.querySelector("#vaccination_t").click();
+          document.querySelector("#vaccination_t").checked = true;
         } else {
-          document.querySelector("#vaccination_f").click();
+          document.querySelector("#vaccination_f").checked = true;
         }
       }
 
       if (result.q1) {
-        document.querySelector("#q1_t").click();
+        document.querySelector("#q1_t").checked = true;
       } else {
-        document.querySelector("#q1_f").click();
+        document.querySelector("#q1_f").checked = true;
       }
 
       if (result.q2) {
-        document.querySelector("#q2_t").click();
+        document.querySelector("#q2_t").checked = true;
       } else {
-        document.querySelector("#q2_f").click();
+        document.querySelector("#q2_f").checked = true;
       }
 
       if (result.q3) {
-        document.querySelector("#q3_t").click();
+        document.querySelector("#q3_t").checked = true;
       } else {
-        document.querySelector("#q3_f").click();
+        document.querySelector("#q3_f").checked = true;
       }
 
       if (result.q4) {
-        document.querySelector("#q4_t").click();
+        document.querySelector("#q4_t").checked = true;
       } else {
-        document.querySelector("#q4_f").click();
+        document.querySelector("#q4_f").checked = true;
       }
 
       if (result.q5) {
-        document.querySelector("#q5_t").click();
+        document.querySelector("#q5_t").checked = true;
       } else {
-        document.querySelector("#q5_f").click();
+        document.querySelector("#q5_f").checked = true;
       }
 
       if (result.q6) {
-        document.querySelector("#q6_t").click();
+        document.querySelector("#q6_t").checked = true;
       } else {
-        document.querySelector("#q6_f").click();
+        document.querySelector("#q6_f").checked = true;
       }
 
       if (result.q7) {
-        document.querySelector("#q7_t").click();
+        document.querySelector("#q7_t").checked = true;
       } else {
-        document.querySelector("#q7_f").click();
+        document.querySelector("#q7_f").checked = true;
       }
 
       if (result.q8) {
-        document.querySelector("#q8_t").click();
+        document.querySelector("#q8_t").checked = true;
       } else {
-        document.querySelector("#q8_f").click();
+        document.querySelector("#q8_f").checked = true;
       }
 
       if (result.declaration) {
-        document.querySelector("#declaration").click();
+        document.querySelector("#declaration").checked = true;
+      } else {
+        document.querySelector("#declaration").checked = false;
       }
     }
   );
