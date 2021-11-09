@@ -16,6 +16,21 @@ chrome.storage.local.get(
     "declaration",
   ],
   (result) => {
+    const topBtn = document.createElement("div");
+    topBtn.innerHTML = `
+      <button
+        id="top"
+        class="btn btn-rounded btn-pink"
+        style="position: fixed; bottom: 0; right: 0; display: inline-flex;"
+      >
+        <i class="fas fa-chevron-circle-up"></i>
+      </button>;
+    `;
+    topBtn.onclick = () => {
+      document.querySelector(".card-body").scrollIntoView();
+    };
+    document.querySelector("body").appendChild(topBtn);
+
     if ("scrollRestoration" in history) {
       history.scrollRestoration = "manual";
     }
