@@ -1,7 +1,7 @@
 {
   "name": "HKU GymEasy",
   "description": "Frictionless gym bookings at HKU.",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "manifest_version": 3,
   "icons": {
     "128": "./images/icon.png"
