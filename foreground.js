@@ -24,7 +24,7 @@ chrome.storage.local.get(
         style="position: fixed; bottom: 0; right: 0; display: inline-flex;"
       >
         <i class="fas fa-chevron-circle-up"></i>
-      </button>;
+      </button>
     `;
     topBtn.onclick = () => {
       document.querySelector(".card-body").scrollIntoView();
